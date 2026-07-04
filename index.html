@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Folio — Docs, Sheets & Slides in one light app</title>
+<meta name="description" content="Folio is a fast, offline-first PWA that combines a document editor, spreadsheet, and presentation tool in one lightweight app. No account, no server — everything saves to your device." />
+<meta name="theme-color" content="#14171f" />
+<link rel="manifest" href="./manifest.json" />
+<link rel="icon" href="./icons/favicon-32.png" sizes="32x32" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Folio" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  if (window.tailwind) {
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            graphite: "#14171f",
+            paper: "#fcfcfd",
+            mist: "#e4e7ed",
+            cobalt: "#2e4ce0",
+            ledger: "#0e8f6f",
+            ember: "#f2542d",
+          },
+          fontFamily: {
+            display: ["Fraunces", "serif"],
+            serif: ["Source Serif 4", "Georgia", "serif"],
+            mono: ["IBM Plex Mono", "monospace"],
+          },
+        },
+      },
+    };
+  }
+</script>
+<link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body class="h-full">
+  <div id="app" class="h-full"></div>
+  <div id="toast-root" aria-live="polite"></div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
